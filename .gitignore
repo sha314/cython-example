@@ -1,0 +1,3 @@
+01.hello_world/build/*
+*.so
+*.o
