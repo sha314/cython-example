@@ -22,8 +22,8 @@ Required softwares:
 ```
 Files used for
 
-.pyx ->
-.pxd ->
+.pyx -> Cython source
+.pxd -> Cython header
 .cpp -> C++ source file
 .h   -> C/C++ header file
 .c   -> C source file

@@ -5,6 +5,6 @@
 5. function with argument as pointer
 6. function returns a pointer
 7. function with argument as reference
-8. function with std::vector argument. One dimensional.
-9. function with std::vector argument. Two dimensional.
+8. function with std::vector argument. One dimensional. done
+9. function with std::vector argument. Two dimensional. done
 10. function with std::vector argument. Multi-dimensional.
