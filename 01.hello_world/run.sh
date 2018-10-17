@@ -8,7 +8,8 @@ echo building
 
 echo ...................................................
 echo removing .c and .cpp file created while compiling
-rm wrapped.c wrapped.cpp
+rm wrapped.cpp
+#rm wrapped.c
 
 echo ...................................................
 echo testing

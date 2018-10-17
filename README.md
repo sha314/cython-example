@@ -4,6 +4,22 @@ Wrapping C/C++ code with cython
 This is a tutorial based repository.
 
 ```
+Operating system:
+Originally written in linux. Therefore all linux based OS should
+be able to compile and run the program
+
+```
+
+```
+Required softwares:
+	python 3
+	cython
+	gcc
+	g++
+	numpy
+```
+
+```
 Files used for
 
 .pyx ->
@@ -11,6 +27,13 @@ Files used for
 .cpp -> C++ source file
 .h   -> C/C++ header file
 .c   -> C source file
+```
+
+```
+How to build and run:
+each folder contains "run.sh" file
+run the file from terminal and that should do all the work
+
 ```
 
 ```
