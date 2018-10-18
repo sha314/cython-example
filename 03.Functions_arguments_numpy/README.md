@@ -3,7 +3,8 @@
 3. function with std::vector argument with numpy. One dimensional. done
 4. function with std::vector argument with numpy. Two dimensional. done
 5. returning a vector by value. done
-5. returning a vector by reference.
+6. returning a vector by reference.
+7. matrix multiplication
 
 
 

@@ -43,3 +43,14 @@ Example list
 	The famous hello world example. In addition there is a function that takes one int argument and return an int value.
 
 02.	
+```
+
+```
+Warning
+	warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ 	#warning "Using deprecated NumPy API, disable it by "
+Solution
+	do not import the following in the .pxy file
+	cimport numpy
+
+```

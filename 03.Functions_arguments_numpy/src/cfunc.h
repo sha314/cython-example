@@ -12,4 +12,10 @@ add(
 	const std::vector<int>& v1,
 	const std::vector<int>& v2);
 
+
+std::vector<std::vector<double>>
+mat_mul(
+	const std::vector<std::vector<double>>& mat1,
+	const std::vector<std::vector<double>>& mat2);
+
 #endif  // _HELLO_WORLD_HEADER_ 

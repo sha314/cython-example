@@ -30,7 +30,8 @@ ext_1 = Extension("rectangleExtension", # name of the module
                   include_dirs=[include_directories], # to prevent fatal error: numpy/arrayobject.h: No such file or directory #include "numpy/arrayobject.h"
                   language="c++",  # so that the compiler knows about the language
                   extra_compile_args=["-std=c++11"],
-                  extra_link_args=["-std=c++11"]
+                  extra_link_args=["-std=c++11"],
+                  #define_macros = [('NPY_NO_DEPRECATED_API', 'NPY_1_7_API_VERSION')]
                   )
 
 

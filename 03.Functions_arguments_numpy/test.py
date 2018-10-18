@@ -17,6 +17,19 @@ def main():
 	print("type of the returened result : ", type(x2))
 	print(x2)
 
+	A = np.array(
+		[[1, 0, 0],
+	 	 [0, 1, 0],
+	 	 [0, 0, 1]])
+
+	B = np.array(
+		[[1.2, 2.3, 3.4],
+	 	 [0, 11, 5],
+	 	 [0, -10, 1]])
+
+	C = functionextension.py_mat_mul(A, B)
+	print(C)
+
 if __name__ == "__main__":
 	main()
 
