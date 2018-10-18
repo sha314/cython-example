@@ -12,7 +12,10 @@ def main():
 	functionextension.py_view_array_2d(y)
 	z = np.array(y)
 	print(z.shape)
-	functionextension.py_view_np_array(z)
+	functionextension.py_view_array_2d(z)
+	x2 = functionextension.py_add(np.ones(10), np.ones(10))
+	print("type of the returened result : ", type(x2))
+	print(x2)
 
 if __name__ == "__main__":
 	main()

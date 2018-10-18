@@ -1,9 +1,6 @@
 # distutils: language = c++
 # cython: language_level=3
 
-import numpy as pnp  # python numpy
-cimport numpy as cnp # cython numpy
-
 # tag: numpy_old
 # You can ignore the previous line.
 # It's for internal testing of the cython documentation.
@@ -41,6 +38,7 @@ cdef extern from "src/cfunc.h":
 
 	void view_array(vector[int]& v)
 	void view_array_2d(vector[vector[int]]& v)
+	vector[int] add(vector[int]& v1, vector[int]& v2)
 
 
 def py_view_array(v):
@@ -51,32 +49,11 @@ def	py_view_array_2d(v):
 	print('executing py_view_array_2d')
 	view_array_2d(v)
 
+def py_add(v1, v2):
+	print("executing py_add")
+	if isinstance(v1, list):
+		return add(v1, v2)
+	if isinstance(v1, np.ndarray):
+		return np.array(add(v1, v2))
 
-def py_view_np_array(A):
-	print("executing py_view_np_array")
-	if isinstance(A, pnp.ndarray):
-		print('numpy. by converting to list')
-		view_array_2d(A.tolist())
-		pass
-	elif isinstance(A, list):
-		print('list')
-		view_array_2d(A)
-		pass
-	# print(A.shape[0])
-	# print(A.shape[1])
-	# cdef np.ndarray[np.int64_t, ndim=2, mode="c"] B = A
-	# view_array_2d(B)
-
-# def py_add_np_array(np.ndarray[np.int64_t, ndim=2, mode="c"] A,
-#                        np.ndarray[np.int64_t, ndim=2, mode="c"] B):
-
-# 	cdef int size_y = A.shape[0]
-# 	cdef int size_x = A.shape[1]
-
-# 	cdef np.ndarray[np.int64_t, ndim=2, mode="c"] plus = np.zeros([size_y, size_x], dtype=np.int64)
-# 	cdef np.ndarray[np.int64_t, ndim=2, mode="c"] minus = np.zeros([size_y, size_x], dtype=np.int64)
-
-# 	_plus_minus(A, B, plus, minus)
-
-# 	return np.asarray(plus), np.asarray(minus)
 
